@@ -1,0 +1,23 @@
+Source: xwiimote-bindings
+Section: devel
+Priority: extra
+Maintainer: Karol Auguštin
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), automake, autoconf, libtool,
+	libncurses5-dev, libudev-dev, pkg-config, swig
+Standards-Version: 3.9.3
+Homepage: https://github.com/dvdhrm/xwiimote-bindings
+Vcs-Git: git://
+Vcs-Browser: http://
+
+Package: xwiimote-bindings
+Section: libs
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Nintendo Wii Remote Linux Device Driver Tools
+ This provides tools related to the open source Nintendo Wii
+ Remote linux device driver.
+ .
+ This contains the tool for displaying Wii remote connected and the setting
+ tool which uses operation of Wii remote as keyboard. 
+
+
