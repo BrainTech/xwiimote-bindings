@@ -8,5 +8,8 @@ export DH_VERBOSE=1
 	dh $@
 
 override_dh_install:
-	dh_install --sourcedir=.
+	./autogen.sh
+	make
+	make install
+
 
