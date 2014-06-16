@@ -3,21 +3,17 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,--no-undefined -Wl,--as-needed
-export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-DPKG_EXPORT_BUILDFLAGS = 1
-include /usr/share/dpkg/buildflags.mk
-
-confflags := --disable-silent-rules \
-	--prefix=/usr \
-	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-	$(NULL)
-confflags += $(shell dpkg-buildflags --export=configure)
+#confflags := --disable-silent-rules \
+#	--prefix=/usr \
+#	--libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
+#	$(NULL)
+#confflags += $(shell dpkg-buildflags --export=configure)
 
 %:
 	dh $@
 
 override_dh_auto_configure:
 	./autogen.sh --prefix=`pwd`/build2
-	dh_auto_configure -- $(confflags)
 
+override_dh_auto_build:
+	make install
