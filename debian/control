@@ -1,13 +1,13 @@
 Source: xwiimote-bindings
 Section: devel
 Priority: extra
-Maintainer: Karol Auguštin
+Maintainer: Karol Auguštin <karol@augustin.pl>
 Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), automake, autoconf, libtool,
 	libncurses5-dev, libudev-dev, pkg-config, swig, libxwiimote-dev, python, python-dev, libperl-dev
 Standards-Version: 3.9.3
 Homepage: https://github.com/dvdhrm/xwiimote-bindings
-Vcs-Git: git://
-Vcs-Browser: http://
+Vcs-Git: git://git.braintech.pl/xwiimote-bindings.git
+Vcs-Browser: http://git.braintech.pl/xwiimote-bindings.git
 
 Package: python-xwiimote
 Section: libs
