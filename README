@@ -1,5 +1,8 @@
+
 Overview {#mainpage}
 ========
+
+This repository is a fork of: https://github.com/dvdhrm/xwiimote-bindings
 
 xwiimote-bindings provides bindings for the xwiimote library for languages
 other than C. You need to install xwiimote before you can use xwiimote-bindings.
